@@ -1,0 +1,22 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin: 3rem;
+}
+
+@media (min-width: 768px) {
+  /* Aplicamos estilos para dispositivos con al menos 768px de ancho */
+  .layout {
+    flex-direction: row; /* Cambiamos a dirección de fila en dispositivos más grandes */
+  }
+
+  .layout__add-date {
+    flex: 0 0 25%; /* La primera columna ocupará el 25% del ancho en dispositivos de escritorio */
+    margin-bottom: 0; /* Eliminamos el margen inferior en dispositivos de escritorio */
+  }
+
+  .layout__appointment-list {
+    flex: 1 0 75%; /* La segunda columna ocupará el 75% del ancho en dispositivos de escritorio */
+  }
+}

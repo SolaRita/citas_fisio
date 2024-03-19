@@ -17,6 +17,7 @@ export class AddDateComponent {
 
   formDate: FormGroup = this.fb.group({
     name: ['', Validators.required],
+    description: ['', Validators.required],
   });
 
   ngOnChanges() {

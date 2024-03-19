@@ -8,6 +8,16 @@
       value=""
     />
   </mat-form-field>
+  <mat-form-field>
+    <mat-label>Descripción</mat-label>
+    <textarea
+      matInput
+      formControlName="description"
+      placeholder="Describe aquí tu dolencia"
+      cols="30"
+      rows="10"
+    ></textarea>
+  </mat-form-field>
   <div *ngIf="appointmentToUpdate; then update; else create"></div>
   <ng-template #create>
     <button

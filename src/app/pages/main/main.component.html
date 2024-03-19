@@ -1,2 +1,11 @@
-<app-add-date></app-add-date>
-<app-appointment-list [appointmentList]="appointments"></app-appointment-list>
+<div class="layout">
+  <div class="layout__add-date">
+    <app-add-date class="add-date"></app-add-date>
+  </div>
+  <div class="layout__appointment-list">
+    <app-appointment-list
+      class="appointment-list"
+      [appointmentList]="appointments"
+    ></app-appointment-list>
+  </div>
+</div>

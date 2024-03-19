@@ -19,6 +19,7 @@ export class AppointmentCardComponent {
   @Input()
   public appointment: Appointment = {
     name: '',
+    description: '',
   };
 
   deleteAppointment(id: string) {
