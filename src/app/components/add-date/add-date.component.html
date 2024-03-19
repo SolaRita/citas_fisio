@@ -1,0 +1,43 @@
+<form [formGroup]="formDate">
+  <mat-form-field>
+    <mat-label>Tu nombre</mat-label>
+    <input
+      formControlName="name"
+      matInput
+      placeholder="Ramona Berenguer"
+      value=""
+    />
+  </mat-form-field>
+  <div *ngIf="appointmentToUpdate; then update; else create"></div>
+  <ng-template #create>
+    <button
+      mat-button
+      color="primary"
+      type="submit"
+      [disabled]="formDate.invalid"
+      (click)="onSave()"
+    >
+      Reservar
+    </button>
+  </ng-template>
+  <ng-template #update>
+    <div layout="column">
+      <button
+        mat-button
+        color="primary"
+        (click)="onUpdate()"
+        [disabled]="formDate.invalid"
+      >
+        Modificar
+      </button>
+      <button
+        mat-button
+        color="primary"
+        (click)="onClose()"
+        [disabled]="formDate.invalid"
+      >
+        Cancelar
+      </button>
+    </div>
+  </ng-template>
+</form>

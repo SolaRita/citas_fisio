@@ -1,0 +1,5 @@
+<app-appointment-card
+  [appointment]="appointment"
+  (onDeleteApointment)="onDeleteAppoinment($event)"
+  *ngFor="let appointment of appointmentList; index as i; trackBy: trackByFn"
+></app-appointment-card>
